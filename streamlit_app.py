@@ -8,9 +8,9 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://flagcdn.com/w2560/bt.png");
+        background-image: url("https://b-cdn.springnest.com/media/img/kd/4034690728_bc032ab670_o5087a9c.jpg?width=800");
         background-size: cover;
-        opacity: 0.8;
+        opacity: 0.3;
     }
     </style>
     """,
