@@ -8,7 +8,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://example.com/bhutan-background.jpg");
+        background-image: url("https://flagcdn.com/w2560/bt.png");
         background-size: cover;
     }
     </style>
