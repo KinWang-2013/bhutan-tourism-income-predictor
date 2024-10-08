@@ -10,7 +10,7 @@ st.markdown(
     .stApp {
         background-image: url("https://b-cdn.springnest.com/media/img/kd/4034690728_bc032ab670_o5087a9c.jpg?width=800");
         background-size: cover;
-        opacity: 0.3;
+        opacity: 0.7;
     }
     </style>
     """,
