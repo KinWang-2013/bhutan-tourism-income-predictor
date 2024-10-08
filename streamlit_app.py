@@ -10,13 +10,14 @@ st.markdown(
     .stApp {
         background-image: url("https://flagcdn.com/w2560/bt.png");
         background-size: cover;
+        opacity: 0.8;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-st.image("https://example.com/bhutan-flag.png", width=100)
+st.image("https://flagcdn.com/w2560/bt.png", width=100)
 
 st.markdown(
     """
