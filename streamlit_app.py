@@ -36,6 +36,12 @@ st.markdown(
         font-size: 1.9rem !important;
     }
 
+    .center-flag {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
     .predicted-output {
         font-size: 3rem;
         color: #008000;
@@ -66,7 +72,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.image("https://flagcdn.com/w2560/bt.png", width=100)
+st.markdown('<div class="center-flag"><img src="https://flagcdn.com/w2560/bt.png" width="100"></div>', unsafe_allow_html=True)
 
 st.title("Bhutan Tourism Predictor")
 st.write("Predict the number of tourists for Bhutan based on the year input.")
