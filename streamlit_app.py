@@ -9,16 +9,33 @@ st.markdown(
     .stApp {
         background-size: cover;
         opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
-    /* Style for the number input to make it smaller */
+    label {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .block-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
     input[type=number] {
-        width: 150px !important;
-        padding: 10px !important;
+        width: 100px !important;
+        padding: 5px !important;
         font-size: 16px !important;
     }
 
-    /* Style for the 'Predicted number of tourists' output to make it larger and more attractive */
     .predicted-output {
         font-size: 2rem;
         color: #008000;
@@ -32,7 +49,6 @@ st.markdown(
         margin-bottom: 5px;
     }
 
-    /* Style for the button */
     .stButton>button {
         background-color: #FFCC00;
         color: #0033A0;
