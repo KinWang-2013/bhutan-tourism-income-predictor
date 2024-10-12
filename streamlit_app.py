@@ -16,7 +16,7 @@ st.markdown(
     }
 
     label {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
         color: #333;
         margin-bottom: 10px;
@@ -33,20 +33,26 @@ st.markdown(
     input[type=number] {
         width: 100px !important;
         padding: 5px !important;
-        font-size: 16px !important;
+        font-size: 1.9rem !important;
     }
 
     .predicted-output {
-        font-size: 2rem;
+        font-size: 3rem;
         color: #008000;
         font-weight: bold;
         margin-top: 20px;
     }
 
     .predicted-label {
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: #333;
         margin-bottom: 5px;
+    }
+
+    .predict-label {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 0px;
     }
 
     .stButton>button {
@@ -65,7 +71,11 @@ st.image("https://flagcdn.com/w2560/bt.png", width=100)
 st.title("Bhutan Tourism Predictor")
 st.write("Predict the number of tourists for Bhutan based on the year input.")
 
-year = st.number_input("Enter the year:", min_value=2024, max_value=2100, value=2024, step=1)
+
+st.markdown(f"""
+    <div class="predict-label">Enter the year:</div>
+""", unsafe_allow_html=True)
+year = st.number_input("", min_value=2024, max_value=2100, value=2024, step=1)
 
 predicted_income = 200
 
