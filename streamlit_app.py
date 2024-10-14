@@ -1,5 +1,14 @@
 import streamlit as st
 from datetime import datetime
+import pickle
+import pandas as pd
+
+def load_model():
+    with open('tourist_arrival_model.pkl', 'rb') as file:
+        model = pickle.load(file)
+    return model
+
+model = load_model()
 
 st.set_page_config(page_title="Bhutan Tourism Predictor", page_icon="🇧🇹", layout="wide")
 
@@ -79,13 +88,16 @@ st.write("Predict the number of tourists for Bhutan based on the year input.")
 
 
 st.markdown(f"""
-    <div class="predict-label">Enter the year:</div>
+    <div class="predict-label">Enter the  year:</div>
 """, unsafe_allow_html=True)
-year = st.number_input("", min_value=2024, max_value=2100, value=2024, step=1)
+start_year = st.number_input("", min_value=2024, max_value=3000, value=2024, step=1)
 
-predicted_income = 200
+year = pd.to_datetime(str(start_year)).to_period('Y')
+    
+predicted = model.predict(start=year, end=year)
+
 
 st.markdown(f"""
-    <div class="predicted-label">Predicted number of tourists for the year {year}:</div>
-    <div class="predicted-output">{predicted_income}</div>
+    <div class="predicted-label">Predicted number of tourists arriving in the year {year}:</div>
+    <div class="predicted-output">{int(predicted.get(year))}</div>
 """, unsafe_allow_html=True)
