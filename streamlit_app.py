@@ -90,7 +90,7 @@ st.write("Predict the number of tourists for Bhutan based on the year input.")
 st.markdown(f"""
     <div class="predict-label">Enter the  year:</div>
 """, unsafe_allow_html=True)
-start_year = st.number_input("", min_value=2024, max_value=3000, value=2024, step=1)
+start_year = st.number_input("", min_value=2024, max_value=2262, value=2024, step=1)
 
 year = pd.to_datetime(str(start_year)).to_period('Y')
     
